@@ -2,4 +2,5 @@
 *.pptx
 *XDATCAR*
 **/extra_data/*
+*.mp4
 data/structure_analysis/cubic/dft_relaxation/150_benji/output/Li17Sc5Cl32_coulomb_energy.txt

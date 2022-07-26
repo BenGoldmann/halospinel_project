@@ -1,0 +1,261 @@
+GERun: 
+GERun: Note: Lines like this one prefixed with "GERun:" are for debugging
+GERun:       purposes only and you do not need to report them to rc-support
+GERun:       unless your job fails for other reasons.
+GERun: 
+GERun: 
+GERun: Grid Engine parallel launcher abstraction layer version iv (public)
+GERun: Dr Owain Kenway, RCAS, RITS, ISD, UCL, 7th of February, 2018
+GERun: 
+GERun: For licensing terms, see LICENSE.txt
+GERun: 
+GERun: Using environment: intel
+GERun: Running on 160 slots:
+GERun:   160 MPI tasks
+GERun:     1 threads per task
+GERun: TMPDIR=/tmpdir/job/501837.undefined
+GERun: 
+GERun: Contents of machinefile:
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-024
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-016
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-027
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: node-a14c-023
+GERun: 
+GERun: GErun command being run:
+GERun:  mpirun --rsh=ssh -machinefile /tmpdir/job/501837.undefined/machines.unique -np 160 -rr /shared/ucl/apps/lammps/7Aug2019/USERINTEL/intel-2018/lammps/bin/lmp_default -in monoclinic_9x9x9_300k.inp
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 0
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 40
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 8
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 28
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 76
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 24
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 48
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 56
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 44
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 64
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 68
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 72
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 80
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 144
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 12
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 16
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 32
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 36
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 60
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 84
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 88
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 100
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 112
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 116
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 120
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 124
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 128
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 132
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 20
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 92
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 96
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 104
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 108
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 136
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 140
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 148
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 152
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 156
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 5
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 9
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 17
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 21
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 29
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 33
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 37
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 41
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 45
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 49
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 57
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 61
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 69
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 73
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 77
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 89
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 97
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 101
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 105
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 121
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 125
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 137
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 141
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 145
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 153
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 157
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 13
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 25
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 53
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 65
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 81
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 85
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 93
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 109
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 113
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 117
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 129
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 149
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 52
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 133

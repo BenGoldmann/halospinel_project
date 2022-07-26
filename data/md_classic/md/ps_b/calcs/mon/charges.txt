@@ -1,0 +1,4 @@
+charge
+Li +1
+Sc +3
+Cl -1

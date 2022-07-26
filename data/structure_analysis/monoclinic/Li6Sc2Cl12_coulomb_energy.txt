@@ -1,0 +1,2 @@
+Li6Sc2Cl12_i0_w4.cif	-152.805 eV
+Li6Sc2Cl12_i1_w4.cif	-154.214 eV

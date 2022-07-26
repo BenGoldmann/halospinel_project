@@ -1,0 +1,863 @@
+********************************************************************************
+*                       GENERAL UTILITY LATTICE PROGRAM                        *
+*                                 Julian Gale                                  *
+*                       Curtin Institute for Computation                       *
+*                    School of Molecular and Life Sciences                     *
+*                    Curtin University, Western Australia                      *
+********************************************************************************
+* Version = 5.2.0 * Last modified =   1st June 2020                            *
+********************************************************************************
+*  fit          - perform fitting run                                          *
+*  optimise     - perform optimisation run after fitting                       *
+*  conp         - constant pressure calculation                                *
+*  nosymmetry   - turn off symmetry after initial structure generation         *
+*  simultaneous - relax shell positions and radii during fitting               *
+*  compare      - compare initial and final structures                         *
+********************************************************************************
+
+  Job Started  at 13:08.50 19th April      2022                               
+
+  Number of CPUs =     1
+
+
+  Total number of configurations input =      1
+
+********************************************************************************
+*  Input for Configuration =   1                                               *
+********************************************************************************
+
+  Formula = Sc2Cl6                                                      
+
+  Number of irreducible atoms/shells =      14
+
+
+  Total number atoms/shells =      14
+
+  Dimensionality = 3               :  Bulk   
+
+
+
+  Cartesian lattice vectors (Angstroms) :
+
+        7.453000    0.000000    0.000000
+        4.624520    5.844744    0.000000
+        4.624520    2.237970    5.399307
+
+  Cell parameters (Angstroms/Degrees):
+
+  a =       7.4530    alpha =  51.6480
+  b =       7.4530    beta  =  51.6480
+  c =       7.4530    gamma =  51.6480
+
+  Initial cell volume =         235.198534 Angs**3
+
+  Temperature of configuration =   0.00     K 
+
+  Pressure of configuration =         0.000 GPa 
+
+  Fractional coordinates of asymmetric unit :
+
+--------------------------------------------------------------------------------
+   No.  Atomic       x           y          z         Charge      Occupancy
+        Label      (Frac)      (Frac)     (Frac)        (e)         (Frac)  
+--------------------------------------------------------------------------------
+      1 Sc    c    0.333900    0.333900    0.333900     3.00000    1.000000    
+      2 Sc    c    0.666100 *  0.666100 *  0.666100 *   3.00000    1.000000    
+      3 Cl    c    0.073700 *  0.443900 *  0.705300 *   1.48500    1.000000    
+      4 Cl    c    0.294700 *  0.926300 *  0.556100 *   1.48500    1.000000    
+      5 Cl    c    0.443900 *  0.705300 *  0.073700 *   1.48500    1.000000    
+      6 Cl    c    0.556100 *  0.294700 *  0.926300 *   1.48500    1.000000    
+      7 Cl    c    0.705300 *  0.073700 *  0.443900 *   1.48500    1.000000    
+      8 Cl    c    0.926300 *  0.556100 *  0.294700 *   1.48500    1.000000    
+      9 Cl    s    0.073700 *  0.443900 *  0.705300 *  -2.48500    1.000000    
+     10 Cl    s    0.294700 *  0.926300 *  0.556100 *  -2.48500    1.000000    
+     11 Cl    s    0.443900 *  0.705300 *  0.073700 *  -2.48500    1.000000    
+     12 Cl    s    0.556100 *  0.294700 *  0.926300 *  -2.48500    1.000000    
+     13 Cl    s    0.705300 *  0.073700 *  0.443900 *  -2.48500    1.000000    
+     14 Cl    s    0.926300 *  0.556100 *  0.294700 *  -2.48500    1.000000    
+--------------------------------------------------------------------------------
+
+
+
+********************************************************************************
+*  General input information                                                   *
+********************************************************************************
+
+  Species output for all configurations : 
+
+--------------------------------------------------------------------------------
+  Species    Type    Atomic    Atomic    Charge       Radii (Angs)     Library
+                     Number     Mass       (e)     Cova   Ionic  VDW   Symbol
+--------------------------------------------------------------------------------
+    Sc       Core       21      44.96   3.000000   1.440  0.000  2.150          
+    Cl       Core       17      35.45   1.485000   0.990  0.000  1.650          
+    Cl       Shell      17       0.00  -2.485000   0.990  0.000  1.650          
+--------------------------------------------------------------------------------
+
+
+  Lattice summation method               =    Ewald          (3-D)
+                                         =    Parry          (2-D)
+                                         =    Saunders et al (1-D)
+  Accuracy factor for lattice sums       =   12.000
+
+
+  Analytic derivatives to be used
+
+  Time limit = Infinity
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+Cl   c Cl   s Spring (c-s)  Spring k 2       29.380000    eV*Ang^-2 0.000  0.800
+                            Spring k 4       0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+Sc   c Cl   s Buckingham    Buckingham A     2191.0900    eV        0.000 12.000
+                            Buckingham rho  0.34570000    Ang       
+                            Buckingham C     0.0000000    eV*Ang^6  
+--------------------------------------------------------------------------------
+Cl   s Cl   s Buckingham    Buckingham A     1227.2000    eV        0.000 12.000
+                            Buckingham rho  0.32100000    Ang       
+                            Buckingham C     14.530000    eV*Ang^6  
+--------------------------------------------------------------------------------
+
+
+  Number of variables   =   20
+  Number of observables =   45
+
+--------------------------------------------------------------------------------
+   Observable no.  Type           Observable    Weight       Reference  Confign 
+--------------------------------------------------------------------------------
+          1        Derivative        0.000000        1.0000    2 x         1
+          2        Derivative        0.000000        1.0000    2 y         1
+          3        Derivative        0.000000        1.0000    2 z         1
+          4        Derivative        0.000000        1.0000    3 x         1
+          5        Derivative        0.000000        1.0000    3 y         1
+          6        Derivative        0.000000        1.0000    3 z         1
+          7        Derivative        0.000000        1.0000    4 x         1
+          8        Derivative        0.000000        1.0000    4 y         1
+          9        Derivative        0.000000        1.0000    4 z         1
+         10        Derivative        0.000000        1.0000    5 x         1
+         11        Derivative        0.000000        1.0000    5 y         1
+         12        Derivative        0.000000        1.0000    5 z         1
+         13        Derivative        0.000000        1.0000    6 x         1
+         14        Derivative        0.000000        1.0000    6 y         1
+         15        Derivative        0.000000        1.0000    6 z         1
+         16        Derivative        0.000000        1.0000    7 x         1
+         17        Derivative        0.000000        1.0000    7 y         1
+         18        Derivative        0.000000        1.0000    7 z         1
+         19        Derivative        0.000000        1.0000    8 x         1
+         20        Derivative        0.000000        1.0000    8 y         1
+         21        Derivative        0.000000        1.0000    8 z         1
+         22        Derivative        0.000000        1.0000    9 x         1
+         23        Derivative        0.000000        1.0000    9 y         1
+         24        Derivative        0.000000        1.0000    9 z         1
+         25        Derivative        0.000000        1.0000   10 x         1
+         26        Derivative        0.000000        1.0000   10 y         1
+         27        Derivative        0.000000        1.0000   10 z         1
+         28        Derivative        0.000000        1.0000   11 x         1
+         29        Derivative        0.000000        1.0000   11 y         1
+         30        Derivative        0.000000        1.0000   11 z         1
+         31        Derivative        0.000000        1.0000   12 x         1
+         32        Derivative        0.000000        1.0000   12 y         1
+         33        Derivative        0.000000        1.0000   12 z         1
+         34        Derivative        0.000000        1.0000   13 x         1
+         35        Derivative        0.000000        1.0000   13 y         1
+         36        Derivative        0.000000        1.0000   13 z         1
+         37        Derivative        0.000000        1.0000   14 x         1
+         38        Derivative        0.000000        1.0000   14 y         1
+         39        Derivative        0.000000        1.0000   14 z         1
+         40        Derivative        0.000000        1.0000    a           1
+         41        Derivative        0.000000        1.0000    b           1
+         42        Derivative        0.000000        1.0000    c           1
+         43        Derivative        0.000000        1.0000    alpha       1
+         44        Derivative        0.000000        1.0000    beta        1
+         45        Derivative        0.000000        1.0000    gamma       1
+--------------------------------------------------------------------------------
+
+  Variables :
+
+--------------------------------------------------------------------------------
+     Parameter No.       Parameter Value          Parameter Type  Species
+--------------------------------------------------------------------------------
+             1               2191.090000          Buckingham A   
+             2                  0.345700          Buckingham rho 
+             3                  0.073700          Shell position    1   9 x
+             4                  0.443900          Shell position    1   9 y
+             5                  0.705300          Shell position    1   9 z
+             6                  0.294700          Shell position    1  10 x
+             7                  0.926300          Shell position    1  10 y
+             8                  0.556100          Shell position    1  10 z
+             9                  0.443900          Shell position    1  11 x
+            10                  0.705300          Shell position    1  11 y
+            11                  0.073700          Shell position    1  11 z
+            12                  0.556100          Shell position    1  12 x
+            13                  0.294700          Shell position    1  12 y
+            14                  0.926300          Shell position    1  12 z
+            15                  0.705300          Shell position    1  13 x
+            16                  0.073700          Shell position    1  13 y
+            17                  0.443900          Shell position    1  13 z
+            18                  0.926300          Shell position    1  14 x
+            19                  0.556100          Shell position    1  14 y
+            20                  0.294700          Shell position    1  14 z
+--------------------------------------------------------------------------------
+
+  Simultaneous optimisation will be performed during fitting
+  First derivatives of residuals to be used in fitting
+
+  Maximum no. of cycles   =       5000
+  Maximum step size       =  1000.0000
+  Tolerance on parameters =  0.0000100
+  Tolerance on function   =  0.0000100
+  Tolerance on gradient   =  0.0001000
+  Differencing interval   =  0.0001000
+
+  Start of fitting :
+
+  Cycle:      0  Sum sqs:  128712.118259  Gnorm:3411827.199581  CPU:    0.127
+  ** Hessian calculated **
+  Cycle:      1  Sum sqs:   37846.909285  Gnorm: 787319.635188  CPU:    0.256
+  Cycle:      2  Sum sqs:    5343.132540  Gnorm: 198971.723402  CPU:    0.379
+  Cycle:      3  Sum sqs:    3260.476016  Gnorm: 225741.924513  CPU:    0.497
+  Cycle:      4  Sum sqs:    1430.598851  Gnorm: 110402.901723  CPU:    0.617
+  Cycle:      5  Sum sqs:     848.091666  Gnorm:  94063.616053  CPU:    0.737
+  Cycle:      6  Sum sqs:     143.123018  Gnorm:  79705.430172  CPU:    0.855
+  Cycle:      7  Sum sqs:      46.770959  Gnorm:   4594.227219  CPU:    0.971
+  Cycle:      8  Sum sqs:      45.338975  Gnorm:   5981.946885  CPU:    1.087
+  Cycle:      9  Sum sqs:      40.261335  Gnorm:   8858.130190  CPU:    1.205
+  Cycle:     10  Sum sqs:      37.292165  Gnorm:   3226.384018  CPU:    1.319
+  Cycle:     11  Sum sqs:      36.365323  Gnorm:    959.522920  CPU:    1.432
+  Cycle:     12  Sum sqs:      36.335745  Gnorm:    190.877929  CPU:    1.548
+  Cycle:     13  Sum sqs:      36.334176  Gnorm:    117.813127  CPU:    1.664
+  Cycle:     14  Sum sqs:      36.325578  Gnorm:    159.963264  CPU:    1.780
+  Cycle:     15  Sum sqs:      36.324449  Gnorm:     33.962378  CPU:    1.900
+  Cycle:     16  Sum sqs:      36.323579  Gnorm:     46.865929  CPU:    2.016
+  Cycle:     17  Sum sqs:      36.323471  Gnorm:     32.159051  CPU:    2.132
+  Cycle:     18  Sum sqs:      36.321855  Gnorm:    148.443683  CPU:    2.248
+  Cycle:     19  Sum sqs:      36.317741  Gnorm:     65.813377  CPU:    2.364
+  Cycle:     20  Sum sqs:      36.309780  Gnorm:    722.553771  CPU:    2.482
+  ** Hessian calculated **
+  Cycle:     21  Sum sqs:      36.303579  Gnorm:    101.913354  CPU:    2.705
+  Cycle:     22  Sum sqs:      36.301757  Gnorm:    100.074539  CPU:    2.827
+  Cycle:     23  Sum sqs:      36.301380  Gnorm:     77.331105  CPU:    2.945
+  Cycle:     24  Sum sqs:      36.297953  Gnorm:    183.710105  CPU:    3.066
+  Cycle:     25  Sum sqs:      36.296462  Gnorm:     27.504792  CPU:    3.179
+  Cycle:     26  Sum sqs:      36.295780  Gnorm:     28.162364  CPU:    3.295
+  Cycle:     27  Sum sqs:      36.295710  Gnorm:     31.254960  CPU:    3.412
+  Cycle:     28  Sum sqs:      36.294328  Gnorm:    253.021152  CPU:    3.528
+  Cycle:     29  Sum sqs:      36.291976  Gnorm:    104.543538  CPU:    3.647
+  Cycle:     30  Sum sqs:      36.291506  Gnorm:     85.373269  CPU:    3.764
+  Cycle:     31  Sum sqs:      36.281121  Gnorm:    560.697273  CPU:    3.881
+  Cycle:     32  Sum sqs:      36.259967  Gnorm:    755.209207  CPU:    3.999
+  Cycle:     33  Sum sqs:      36.237889  Gnorm:    917.357707  CPU:    4.115
+  Cycle:     34  Sum sqs:      36.229280  Gnorm:    376.241502  CPU:    4.233
+  Cycle:     35  Sum sqs:      36.204238  Gnorm:    336.067650  CPU:    4.352
+  Cycle:     36  Sum sqs:      36.184539  Gnorm:    711.325268  CPU:    4.470
+  Cycle:     37  Sum sqs:      36.147989  Gnorm:   1044.543036  CPU:    4.586
+  Cycle:     38  Sum sqs:      36.111464  Gnorm:    613.460194  CPU:    4.702
+  Cycle:     39  Sum sqs:      36.100565  Gnorm:    555.520971  CPU:    4.825
+  Cycle:     40  Sum sqs:      36.089345  Gnorm:    510.486484  CPU:    4.946
+  ** Hessian calculated **
+  Cycle:     41  Sum sqs:      36.081544  Gnorm:    233.529615  CPU:    5.165
+  Cycle:     42  Sum sqs:      36.080740  Gnorm:    113.656543  CPU:    5.280
+  Cycle:     43  Sum sqs:      36.079009  Gnorm:    214.906719  CPU:    5.396
+  Cycle:     44  Sum sqs:      36.075249  Gnorm:    112.126292  CPU:    5.514
+  Cycle:     45  Sum sqs:      36.071659  Gnorm:     47.557672  CPU:    5.630
+  Cycle:     46  Sum sqs:      36.071523  Gnorm:     33.358889  CPU:    5.746
+  Cycle:     47  Sum sqs:      36.070672  Gnorm:     18.283964  CPU:    5.863
+  Cycle:     48  Sum sqs:      36.068377  Gnorm:    137.821558  CPU:    5.979
+  Cycle:     49  Sum sqs:      36.067347  Gnorm:     91.685272  CPU:    6.094
+  Cycle:     50  Sum sqs:      36.066852  Gnorm:     74.427051  CPU:    6.207
+  Cycle:     51  Sum sqs:      36.066285  Gnorm:    133.880192  CPU:    6.323
+  Cycle:     52  Sum sqs:      36.034688  Gnorm:    274.106382  CPU:    6.447
+  Cycle:     53  Sum sqs:      36.023396  Gnorm:    505.215401  CPU:    6.561
+  Cycle:     54  Sum sqs:      36.004743  Gnorm:    904.892746  CPU:    6.678
+  Cycle:     55  Sum sqs:      35.986148  Gnorm:    229.182728  CPU:    6.794
+  Cycle:     56  Sum sqs:      35.976714  Gnorm:    235.669284  CPU:    6.915
+  Cycle:     57  Sum sqs:      35.967579  Gnorm:    278.895431  CPU:    7.036
+  Cycle:     58  Sum sqs:      35.948663  Gnorm:    527.857669  CPU:    7.154
+  Cycle:     59  Sum sqs:      35.933692  Gnorm:    868.005043  CPU:    7.272
+  Cycle:     60  Sum sqs:      35.928457  Gnorm:    461.029276  CPU:    7.388
+  ** Hessian calculated **
+  Cycle:     61  Sum sqs:      35.924818  Gnorm:    284.421150  CPU:    7.610
+  Cycle:     62  Sum sqs:      35.917598  Gnorm:    229.053039  CPU:    7.726
+  Cycle:     63  Sum sqs:      35.909852  Gnorm:    353.536440  CPU:    7.843
+  Cycle:     64  Sum sqs:      35.894521  Gnorm:    393.595628  CPU:    7.959
+  Cycle:     65  Sum sqs:      35.887486  Gnorm:     60.542714  CPU:    8.072
+  Cycle:     66  Sum sqs:      35.887086  Gnorm:     82.613448  CPU:    8.188
+  Cycle:     67  Sum sqs:      35.883497  Gnorm:     18.328253  CPU:    8.304
+  Cycle:     68  Sum sqs:      35.883077  Gnorm:    144.688149  CPU:    8.418
+  Cycle:     69  Sum sqs:      35.882420  Gnorm:    177.401981  CPU:    8.541
+  Cycle:     70  Sum sqs:      35.881412  Gnorm:     41.392464  CPU:    8.659
+  Cycle:     71  Sum sqs:      35.880614  Gnorm:    158.916101  CPU:    8.775
+  Cycle:     72  Sum sqs:      35.866449  Gnorm:    144.877188  CPU:    8.891
+  Cycle:     73  Sum sqs:      35.860163  Gnorm:    494.196711  CPU:    9.008
+  Cycle:     74  Sum sqs:      35.840392  Gnorm:    368.015181  CPU:    9.135
+  Cycle:     75  Sum sqs:      35.824359  Gnorm:    300.290128  CPU:    9.254
+  Cycle:     76  Sum sqs:      35.812317  Gnorm:    988.075763  CPU:    9.367
+  Cycle:     77  Sum sqs:      35.784782  Gnorm:    586.180556  CPU:    9.481
+  Cycle:     78  Sum sqs:      35.759218  Gnorm:    893.736267  CPU:    9.597
+  Cycle:     79  Sum sqs:      35.659861  Gnorm:   1064.030791  CPU:    9.724
+  Cycle:     80  Sum sqs:      35.624672  Gnorm:    362.057095  CPU:    9.840
+  ** Hessian calculated **
+  Cycle:     81  Sum sqs:      35.623302  Gnorm:    118.762944  CPU:   10.061
+  Cycle:     82  Sum sqs:      35.622301  Gnorm:    126.123381  CPU:   10.177
+  Cycle:     83  Sum sqs:      35.620198  Gnorm:    156.428729  CPU:   10.295
+  Cycle:     84  Sum sqs:      35.616964  Gnorm:    165.863078  CPU:   10.411
+  Cycle:     85  Sum sqs:      35.614126  Gnorm:     43.610188  CPU:   10.526
+  Cycle:     86  Sum sqs:      35.613592  Gnorm:    102.869326  CPU:   10.640
+  Cycle:     87  Sum sqs:      35.612192  Gnorm:     25.931989  CPU:   10.756
+  Cycle:     88  Sum sqs:      35.611916  Gnorm:    102.861540  CPU:   10.873
+  Cycle:     89  Sum sqs:      35.608981  Gnorm:     69.565704  CPU:   10.989
+  Cycle:     90  Sum sqs:      35.607867  Gnorm:     50.453822  CPU:   11.102
+  Cycle:     91  Sum sqs:      35.590501  Gnorm:    565.679753  CPU:   11.218
+  Cycle:     92  Sum sqs:      35.569966  Gnorm:    538.163677  CPU:   11.334
+  Cycle:     93  Sum sqs:      35.556629  Gnorm:    257.495520  CPU:   11.450
+  Cycle:     94  Sum sqs:      35.540256  Gnorm:    378.897998  CPU:   11.568
+  Cycle:     95  Sum sqs:      35.522010  Gnorm:    817.821306  CPU:   11.687
+  Cycle:     96  Sum sqs:      35.486908  Gnorm:   1439.965263  CPU:   11.805
+  Cycle:     97  Sum sqs:      35.386628  Gnorm:   1351.762299  CPU:   11.921
+  Cycle:     98  Sum sqs:      35.354080  Gnorm:   1747.351167  CPU:   12.035
+  Cycle:     99  Sum sqs:      35.267101  Gnorm:    766.927447  CPU:   12.150
+  Cycle:    100  Sum sqs:      35.244046  Gnorm:    156.807676  CPU:   12.264
+  ** Hessian calculated **
+  Cycle:    101  Sum sqs:      35.238898  Gnorm:    346.782550  CPU:   12.485
+  Cycle:    102  Sum sqs:      35.235709  Gnorm:    330.681338  CPU:   12.599
+  Cycle:    103  Sum sqs:      35.229200  Gnorm:    195.158141  CPU:   12.714
+  Cycle:    104  Sum sqs:      35.225543  Gnorm:    164.872127  CPU:   12.831
+  Cycle:    105  Sum sqs:      35.224583  Gnorm:     36.641343  CPU:   12.947
+  Cycle:    106  Sum sqs:      35.221874  Gnorm:    154.478500  CPU:   13.063
+  Cycle:    107  Sum sqs:      35.220644  Gnorm:     22.733002  CPU:   13.176
+  Cycle:    108  Sum sqs:      35.214667  Gnorm:     80.598035  CPU:   13.293
+  Cycle:    109  Sum sqs:      35.213832  Gnorm:    142.467550  CPU:   13.409
+  Cycle:    110  Sum sqs:      35.211749  Gnorm:    133.815975  CPU:   13.525
+  Cycle:    111  Sum sqs:      35.196827  Gnorm:    504.381407  CPU:   13.643
+  Cycle:    112  Sum sqs:      35.176727  Gnorm:    518.535952  CPU:   13.759
+  Cycle:    113  Sum sqs:      35.163857  Gnorm:    293.931207  CPU:   13.876
+  Cycle:    114  Sum sqs:      35.115872  Gnorm:    502.358423  CPU:   14.002
+  Cycle:    115  Sum sqs:      35.102615  Gnorm:   1123.670982  CPU:   14.114
+  Cycle:    116  Sum sqs:      35.005504  Gnorm:   1267.072187  CPU:   14.230
+  Cycle:    117  Sum sqs:      34.960416  Gnorm:    606.320394  CPU:   14.345
+  Cycle:    118  Sum sqs:      34.912319  Gnorm:    874.435975  CPU:   14.460
+  Cycle:    119  Sum sqs:      34.823572  Gnorm:    508.501763  CPU:   14.576
+  Cycle:    120  Sum sqs:      34.764376  Gnorm:   1096.682020  CPU:   14.693
+  ** Hessian calculated **
+  Cycle:    121  Sum sqs:      34.753107  Gnorm:    345.052292  CPU:   14.919
+  Cycle:    122  Sum sqs:      34.746573  Gnorm:    203.765041  CPU:   15.035
+  Cycle:    123  Sum sqs:      34.744590  Gnorm:     88.994006  CPU:   15.150
+  Cycle:    124  Sum sqs:      34.743581  Gnorm:     86.434778  CPU:   15.265
+  Cycle:    125  Sum sqs:      34.739336  Gnorm:     60.865331  CPU:   15.381
+  Cycle:    126  Sum sqs:      34.739048  Gnorm:     44.575781  CPU:   15.496
+  Cycle:    127  Sum sqs:      34.734198  Gnorm:     57.299992  CPU:   15.611
+  Cycle:    128  Sum sqs:      34.732849  Gnorm:    236.220393  CPU:   15.726
+  Cycle:    129  Sum sqs:      34.726545  Gnorm:    424.229925  CPU:   15.842
+  Cycle:    130  Sum sqs:      34.713584  Gnorm:    170.576052  CPU:   15.959
+  Cycle:    131  Sum sqs:      34.710617  Gnorm:    246.201287  CPU:   16.075
+  Cycle:    132  Sum sqs:      34.563211  Gnorm:    445.626822  CPU:   16.199
+  Cycle:    133  Sum sqs:      34.536280  Gnorm:   1221.770871  CPU:   16.318
+  Cycle:    134  Sum sqs:      34.466696  Gnorm:   1315.205063  CPU:   16.434
+  Cycle:    135  Sum sqs:      34.435819  Gnorm:    222.204732  CPU:   16.552
+  Cycle:    136  Sum sqs:      34.381807  Gnorm:    683.213423  CPU:   16.672
+  Cycle:    137  Sum sqs:      34.337858  Gnorm:   1471.683132  CPU:   16.791
+  Cycle:    138  Sum sqs:      34.232304  Gnorm:   2005.782716  CPU:   16.907
+  Cycle:    139  Sum sqs:      34.149001  Gnorm:    445.378741  CPU:   17.023
+  Cycle:    140  Sum sqs:      34.041151  Gnorm:    706.196614  CPU:   17.141
+  ** Hessian calculated **
+  Cycle:    141  Sum sqs:      34.033337  Gnorm:    225.207272  CPU:   17.362
+  Cycle:    142  Sum sqs:      34.027375  Gnorm:    140.551248  CPU:   17.478
+  Cycle:    143  Sum sqs:      34.018858  Gnorm:    287.991532  CPU:   17.594
+  Cycle:    144  Sum sqs:      34.012016  Gnorm:    144.438701  CPU:   17.708
+  Cycle:    145  Sum sqs:      34.011350  Gnorm:     68.297760  CPU:   17.824
+  Cycle:    146  Sum sqs:      34.003733  Gnorm:    175.918386  CPU:   17.940
+  Cycle:    147  Sum sqs:      34.002606  Gnorm:     59.183054  CPU:   18.055
+  Cycle:    148  Sum sqs:      33.995837  Gnorm:    526.101789  CPU:   18.171
+  Cycle:    149  Sum sqs:      33.990242  Gnorm:    210.845580  CPU:   18.284
+  Cycle:    150  Sum sqs:      33.988237  Gnorm:    187.650831  CPU:   18.397
+  Cycle:    151  Sum sqs:      33.977196  Gnorm:    175.331693  CPU:   18.521
+  Cycle:    152  Sum sqs:      33.964898  Gnorm:    165.095334  CPU:   18.644
+  Cycle:    153  Sum sqs:      33.955184  Gnorm:    157.944585  CPU:   18.766
+  Cycle:    154  Sum sqs:      33.948249  Gnorm:    154.621259  CPU:   18.887
+  Cycle:    155  Sum sqs:      33.944529  Gnorm:    153.557914  CPU:   19.005
+  Cycle:    156  Sum sqs:      33.940128  Gnorm:    152.954983  CPU:   19.126
+  Cycle:    157  Sum sqs:      33.937522  Gnorm:    152.894655  CPU:   19.245
+  Cycle:    158  Sum sqs:      33.934667  Gnorm:    153.069911  CPU:   19.365
+  Cycle:    159  Sum sqs:      33.932155  Gnorm:    153.419662  CPU:   19.486
+  Cycle:    160  Sum sqs:      33.929901  Gnorm:    153.879251  CPU:   19.607
+  ** Hessian calculated **
+  Cycle:    161  Sum sqs:      33.928340  Gnorm:    309.670555  CPU:   19.826
+  Cycle:    162  Sum sqs:      33.925572  Gnorm:    308.706211  CPU:   19.942
+  Cycle:    163  Sum sqs:      33.914738  Gnorm:    256.270202  CPU:   20.058
+  Cycle:    164  Sum sqs:      33.912069  Gnorm:     67.614009  CPU:   20.173
+  Cycle:    165  Sum sqs:      33.910662  Gnorm:     86.869136  CPU:   20.289
+  Cycle:    166  Sum sqs:      33.902254  Gnorm:     53.272454  CPU:   20.405
+  Cycle:    167  Sum sqs:      33.901147  Gnorm:    153.380614  CPU:   20.521
+  Cycle:    168  Sum sqs:      33.894733  Gnorm:    366.642004  CPU:   20.640
+  Cycle:    169  Sum sqs:      33.888343  Gnorm:    102.246881  CPU:   20.757
+  Cycle:    170  Sum sqs:      33.857619  Gnorm:    782.666396  CPU:   20.875
+  Cycle:    171  Sum sqs:      33.805376  Gnorm:    838.045373  CPU:   20.997
+  Cycle:    172  Sum sqs:      33.748988  Gnorm:   1256.126661  CPU:   21.118
+  Cycle:    173  Sum sqs:      33.686499  Gnorm:   2021.520280  CPU:   21.244
+  Cycle:    174  Sum sqs:      33.635032  Gnorm:   1253.079934  CPU:   21.363
+  Cycle:    175  Sum sqs:      33.579988  Gnorm:   1593.383575  CPU:   21.481
+  Cycle:    176  Sum sqs:      33.457996  Gnorm:   1097.877495  CPU:   21.598
+  Cycle:    177  Sum sqs:      33.376119  Gnorm:   1532.437335  CPU:   21.717
+  Cycle:    178  Sum sqs:      33.165303  Gnorm:   2807.713481  CPU:   21.833
+  Cycle:    179  Sum sqs:      33.091935  Gnorm:   1343.285641  CPU:   21.949
+  Cycle:    180  Sum sqs:      32.901464  Gnorm:   1173.841317  CPU:   22.067
+  ** Hessian calculated **
+  Cycle:    181  Sum sqs:      32.883068  Gnorm:    307.965130  CPU:   22.289
+  Cycle:    182  Sum sqs:      32.879148  Gnorm:    179.207335  CPU:   22.403
+  Cycle:    183  Sum sqs:      32.876422  Gnorm:    209.843372  CPU:   22.519
+  Cycle:    184  Sum sqs:      32.871675  Gnorm:    171.633930  CPU:   22.636
+  Cycle:    185  Sum sqs:      32.860201  Gnorm:     85.743167  CPU:   22.751
+  Cycle:    186  Sum sqs:      32.859112  Gnorm:    119.520005  CPU:   22.901
+  Cycle:    187  Sum sqs:      32.844500  Gnorm:    115.506432  CPU:   23.017
+  Cycle:    188  Sum sqs:      32.840193  Gnorm:    360.822114  CPU:   23.132
+  Cycle:    189  Sum sqs:      32.810151  Gnorm:    990.110767  CPU:   23.248
+  Cycle:    190  Sum sqs:      32.787003  Gnorm:    222.989080  CPU:   23.362
+  Cycle:    191  Sum sqs:      32.748076  Gnorm:    984.240535  CPU:   23.478
+  Cycle:    192  Sum sqs:      32.673383  Gnorm:    967.111939  CPU:   23.597
+  Cycle:    193  Sum sqs:      32.566602  Gnorm:   1453.694348  CPU:   23.716
+  Cycle:    194  Sum sqs:      32.399033  Gnorm:   2638.367900  CPU:   23.832
+  Cycle:    195  Sum sqs:      32.334124  Gnorm:   1396.171014  CPU:   23.948
+  Cycle:    196  Sum sqs:      32.212634  Gnorm:   1120.212862  CPU:   24.065
+  Cycle:    197  Sum sqs:      32.018067  Gnorm:   1937.062412  CPU:   24.178
+  Cycle:    198  Sum sqs:      31.873552  Gnorm:   1500.008386  CPU:   24.299
+  Cycle:    199  Sum sqs:      31.735367  Gnorm:   1467.703107  CPU:   24.418
+  Cycle:    200  Sum sqs:      31.638313  Gnorm:   2825.495466  CPU:   24.532
+  ** Hessian calculated **
+  Cycle:    201  Sum sqs:      31.517345  Gnorm:    784.640614  CPU:   24.754
+  Cycle:    202  Sum sqs:      31.466582  Gnorm:    371.220484  CPU:   24.870
+  Cycle:    203  Sum sqs:      31.459771  Gnorm:    115.414558  CPU:   24.983
+  Cycle:    204  Sum sqs:      31.450801  Gnorm:    556.843266  CPU:   25.099
+  Cycle:    205  Sum sqs:      31.426072  Gnorm:     81.512309  CPU:   25.215
+  Cycle:    206  Sum sqs:      31.420179  Gnorm:    475.250486  CPU:   25.328
+  Cycle:    207  Sum sqs:      31.390601  Gnorm:    670.632551  CPU:   25.444
+  Cycle:    208  Sum sqs:      31.377725  Gnorm:    203.510458  CPU:   25.557
+  Cycle:    209  Sum sqs:      31.362039  Gnorm:    813.326750  CPU:   25.674
+  Cycle:    210  Sum sqs:      31.241864  Gnorm:   1291.357444  CPU:   25.790
+  Cycle:    211  Sum sqs:      31.156530  Gnorm:    562.963972  CPU:   25.905
+  Cycle:    212  Sum sqs:      31.087409  Gnorm:   1457.807097  CPU:   26.019
+  Cycle:    213  Sum sqs:      30.973036  Gnorm:    913.012169  CPU:   26.142
+  Cycle:    214  Sum sqs:      30.898336  Gnorm:   1327.916583  CPU:   26.261
+  Cycle:    215  Sum sqs:      30.758433  Gnorm:   3073.432236  CPU:   26.377
+  Cycle:    216  Sum sqs:      30.547426  Gnorm:   1593.176766  CPU:   26.491
+  Cycle:    217  Sum sqs:      30.147019  Gnorm:   2387.567576  CPU:   26.610
+  Cycle:    218  Sum sqs:      30.016645  Gnorm:   1887.013179  CPU:   26.724
+  Cycle:    219  Sum sqs:      29.968609  Gnorm:    490.650605  CPU:   26.840
+  Cycle:    220  Sum sqs:      29.623054  Gnorm:   1600.087317  CPU:   26.958
+  ** Hessian calculated **
+  Cycle:    221  Sum sqs:      29.582420  Gnorm:    766.387061  CPU:   27.179
+  Cycle:    222  Sum sqs:      29.558210  Gnorm:    240.383870  CPU:   27.296
+  Cycle:    223  Sum sqs:      29.549183  Gnorm:    190.190715  CPU:   27.412
+  Cycle:    224  Sum sqs:      29.532143  Gnorm:    572.091963  CPU:   27.527
+  Cycle:    225  Sum sqs:      29.512938  Gnorm:     92.493325  CPU:   27.648
+  Cycle:    226  Sum sqs:      29.507580  Gnorm:    346.648332  CPU:   27.762
+  Cycle:    227  Sum sqs:      29.447091  Gnorm:    257.218759  CPU:   27.881
+  Cycle:    228  Sum sqs:      29.407114  Gnorm:   1416.755550  CPU:   27.994
+  Cycle:    229  Sum sqs:      29.325652  Gnorm:   2219.245548  CPU:   28.110
+  Cycle:    230  Sum sqs:      29.135271  Gnorm:   1476.407145  CPU:   28.226
+  Cycle:    231  Sum sqs:      29.064129  Gnorm:    794.001403  CPU:   28.342
+  Cycle:    232  Sum sqs:      28.959590  Gnorm:    656.584850  CPU:   28.460
+  Cycle:    233  Sum sqs:      28.850885  Gnorm:   1349.279805  CPU:   28.579
+  Cycle:    234  Sum sqs:      28.658788  Gnorm:   2816.389026  CPU:   28.695
+  Cycle:    235  Sum sqs:      28.312407  Gnorm:   2100.337527  CPU:   28.808
+  Cycle:    236  Sum sqs:      28.039025  Gnorm:   1938.954348  CPU:   28.929
+  Cycle:    237  Sum sqs:      27.732621  Gnorm:   2558.046656  CPU:   29.048
+  Cycle:    238  Sum sqs:      27.318777  Gnorm:   4403.038166  CPU:   29.166
+  Cycle:    239  Sum sqs:      27.121672  Gnorm:   2311.102341  CPU:   29.282
+  Cycle:    240  Sum sqs:      26.943931  Gnorm:   2629.139127  CPU:   29.398
+  ** Hessian calculated **
+  Cycle:    241  Sum sqs:      26.830682  Gnorm:   1247.678459  CPU:   29.619
+  Cycle:    242  Sum sqs:      26.737455  Gnorm:    843.142000  CPU:   29.735
+  Cycle:    243  Sum sqs:      26.687142  Gnorm:    828.797162  CPU:   29.848
+  Cycle:    244  Sum sqs:      26.591014  Gnorm:   1308.216573  CPU:   29.964
+  Cycle:    245  Sum sqs:      26.487650  Gnorm:    203.779626  CPU:   30.080
+  Cycle:    246  Sum sqs:      26.456571  Gnorm:    692.828670  CPU:   30.196
+  Cycle:    247  Sum sqs:      26.422937  Gnorm:    305.994308  CPU:   30.312
+  Cycle:    248  Sum sqs:      26.409880  Gnorm:    620.510451  CPU:   30.425
+  Cycle:    249  Sum sqs:      26.379100  Gnorm:   1431.164822  CPU:   30.541
+  Cycle:    250  Sum sqs:      25.967074  Gnorm:   2312.256164  CPU:   30.660
+  Cycle:    251  Sum sqs:      25.773185  Gnorm:   5590.332136  CPU:   30.773
+  Cycle:    252  Sum sqs:      25.313265  Gnorm:   1039.255683  CPU:   30.889
+  Cycle:    253  Sum sqs:      24.918846  Gnorm:   1101.627962  CPU:   31.012
+  Cycle:    254  Sum sqs:      24.621647  Gnorm:   2760.592105  CPU:   31.131
+  Cycle:    255  Sum sqs:      24.431525  Gnorm:   3190.411754  CPU:   31.244
+  Cycle:    256  Sum sqs:      23.676854  Gnorm:   5274.523585  CPU:   31.360
+  Cycle:    257  Sum sqs:      23.095771  Gnorm:   1882.967483  CPU:   31.479
+  Cycle:    258  Sum sqs:      22.962731  Gnorm:   1814.497374  CPU:   31.604
+  Cycle:    259  Sum sqs:      22.723303  Gnorm:   1758.088739  CPU:   31.733
+  Cycle:    260  Sum sqs:      22.409155  Gnorm:   1824.272103  CPU:   31.862
+  ** Hessian calculated **
+  Cycle:    261  Sum sqs:      22.343967  Gnorm:   1392.884737  CPU:   32.086
+  Cycle:    262  Sum sqs:      22.308995  Gnorm:    748.304228  CPU:   32.200
+  Cycle:    263  Sum sqs:      22.159573  Gnorm:   1679.124376  CPU:   32.316
+  Cycle:    264  Sum sqs:      21.841003  Gnorm:    486.652553  CPU:   32.443
+  Cycle:    265  Sum sqs:      21.818440  Gnorm:    452.035053  CPU:   32.566
+  Cycle:    266  Sum sqs:      21.750844  Gnorm:    679.363812  CPU:   32.683
+  Cycle:    267  Sum sqs:      21.665242  Gnorm:    486.010137  CPU:   32.819
+  Cycle:    268  Sum sqs:      21.657242  Gnorm:    308.012801  CPU:   32.959
+  Cycle:    269  Sum sqs:      21.300075  Gnorm:   1413.727527  CPU:   33.078
+  Cycle:    270  Sum sqs:      21.215228  Gnorm:    877.829244  CPU:   33.199
+  Cycle:    271  Sum sqs:      21.103873  Gnorm:   1716.531307  CPU:   33.321
+  Cycle:    272  Sum sqs:      20.884057  Gnorm:   1644.977340  CPU:   33.457
+  Cycle:    273  Sum sqs:      20.781220  Gnorm:   1701.509099  CPU:   33.597
+  Cycle:    274  Sum sqs:      20.729246  Gnorm:   1734.547147  CPU:   33.720
+  Cycle:    275  Sum sqs:      20.701253  Gnorm:   1750.720012  CPU:   33.844
+  Cycle:    276  Sum sqs:      20.685305  Gnorm:   1759.007935  CPU:   33.980
+  Cycle:    277  Sum sqs:      20.676070  Gnorm:   1763.379814  CPU:   34.123
+  Cycle:    278  Sum sqs:      20.670716  Gnorm:   1765.716177  CPU:   34.265
+  Cycle:    279  Sum sqs:      20.667617  Gnorm:   1766.976231  CPU:   34.396
+  Cycle:    280  Sum sqs:      20.665845  Gnorm:   1767.653952  CPU:   34.525
+  ** Hessian calculated **
+  Cycle:    281  Sum sqs:      20.633182  Gnorm:    974.530099  CPU:   34.795
+  Cycle:    282  Sum sqs:      20.579164  Gnorm:    888.306011  CPU:   34.915
+  Cycle:    283  Sum sqs:      20.407699  Gnorm:    984.860394  CPU:   35.053
+  Cycle:    284  Sum sqs:      20.249229  Gnorm:   1128.962455  CPU:   35.190
+  Cycle:    285  Sum sqs:      20.181562  Gnorm:    494.300946  CPU:   35.314
+  Cycle:    286  Sum sqs:      20.161758  Gnorm:    600.585109  CPU:   35.434
+  Cycle:    287  Sum sqs:      19.989333  Gnorm:    231.322021  CPU:   35.560
+  Cycle:    288  Sum sqs:      19.808652  Gnorm:   2446.756614  CPU:   35.687
+  Cycle:    289  Sum sqs:      19.582575  Gnorm:   2999.438223  CPU:   35.811
+  Cycle:    290  Sum sqs:      19.331265  Gnorm:   1204.391665  CPU:   35.938
+  Cycle:    291  Sum sqs:      19.227788  Gnorm:   1817.753777  CPU:   36.068
+  Cycle:    292  Sum sqs:      18.946113  Gnorm:   1304.659440  CPU:   36.207
+  Cycle:    293  Sum sqs:      18.670357  Gnorm:    949.927457  CPU:   36.347
+  Cycle:    294  Sum sqs:      18.303375  Gnorm:   2864.541109  CPU:   36.484
+  Cycle:    295  Sum sqs:      17.728171  Gnorm:   7036.415269  CPU:   36.613
+  Cycle:    296  Sum sqs:      16.909188  Gnorm:   4446.983806  CPU:   36.742
+  Cycle:    297  Sum sqs:      15.649880  Gnorm:   6315.785834  CPU:   36.881
+  Cycle:    298  Sum sqs:      14.867063  Gnorm:   5429.209569  CPU:   37.016
+  Cycle:    299  Sum sqs:      14.693944  Gnorm:   1868.742726  CPU:   37.159
+  Cycle:    300  Sum sqs:      14.178268  Gnorm:   3087.416316  CPU:   37.304
+  ** Hessian calculated **
+  Cycle:    301  Sum sqs:      13.960035  Gnorm:   2450.031456  CPU:   37.567
+  Cycle:    302  Sum sqs:      13.860698  Gnorm:    470.825363  CPU:   37.696
+  Cycle:    303  Sum sqs:      13.795150  Gnorm:   1182.551970  CPU:   37.828
+  Cycle:    304  Sum sqs:      13.706055  Gnorm:   1138.820953  CPU:   37.970
+  Cycle:    305  Sum sqs:      13.538042  Gnorm:    224.626399  CPU:   38.108
+  Cycle:    306  Sum sqs:      13.463214  Gnorm:   1196.923005  CPU:   38.242
+  Cycle:    307  Sum sqs:      13.299261  Gnorm:    505.698240  CPU:   38.373
+  Cycle:    308  Sum sqs:      13.282487  Gnorm:    688.280915  CPU:   38.504
+  Cycle:    309  Sum sqs:      13.037421  Gnorm:   3328.617286  CPU:   38.634
+  Cycle:    310  Sum sqs:      12.683787  Gnorm:   1008.502244  CPU:   38.764
+  Cycle:    311  Sum sqs:      12.545091  Gnorm:   1283.802696  CPU:   38.893
+  Cycle:    312  Sum sqs:      12.105882  Gnorm:   2237.352929  CPU:   39.023
+  Cycle:    313  Sum sqs:      11.408989  Gnorm:   3616.659430  CPU:   39.150
+  Cycle:    314  Sum sqs:      11.034776  Gnorm:   2878.148733  CPU:   39.281
+  Cycle:    315  Sum sqs:      10.594029  Gnorm:   3385.504573  CPU:   39.415
+  Cycle:    316  Sum sqs:      10.088310  Gnorm:   5593.231431  CPU:   39.543
+  Cycle:    317  Sum sqs:       9.823248  Gnorm:   1933.662787  CPU:   39.665
+  Cycle:    318  Sum sqs:       9.578216  Gnorm:   1690.224386  CPU:   39.789
+  Cycle:    319  Sum sqs:       9.427539  Gnorm:   1992.407789  CPU:   39.910
+  Cycle:    320  Sum sqs:       9.116602  Gnorm:   3136.943583  CPU:   40.035
+  ** Hessian calculated **
+  Cycle:    321  Sum sqs:       9.025159  Gnorm:    697.678901  CPU:   40.272
+  Cycle:    322  Sum sqs:       9.001861  Gnorm:    351.505492  CPU:   40.396
+  Cycle:    323  Sum sqs:       8.995294  Gnorm:    313.806739  CPU:   40.517
+  Cycle:    324  Sum sqs:       8.983414  Gnorm:    492.244698  CPU:   40.641
+  Cycle:    325  Sum sqs:       8.956755  Gnorm:    111.707912  CPU:   40.765
+  Cycle:    326  Sum sqs:       8.951219  Gnorm:    319.219502  CPU:   40.886
+  Cycle:    327  Sum sqs:       8.931570  Gnorm:    190.088508  CPU:   41.010
+  Cycle:    328  Sum sqs:       8.929824  Gnorm:    196.573259  CPU:   41.135
+  Cycle:    329  Sum sqs:       8.918889  Gnorm:    833.301444  CPU:   41.259
+  Cycle:    330  Sum sqs:       8.890704  Gnorm:    163.937609  CPU:   41.387
+  Cycle:    331  Sum sqs:       8.869615  Gnorm:    506.249606  CPU:   41.514
+  Cycle:    332  Sum sqs:       8.816384  Gnorm:    550.057397  CPU:   41.667
+  Cycle:    333  Sum sqs:       8.781647  Gnorm:    123.373258  CPU:   41.851
+  Cycle:    334  Sum sqs:       8.780175  Gnorm:    199.994503  CPU:   42.048
+  Cycle:    335  Sum sqs:       8.775434  Gnorm:    166.095687  CPU:   42.202
+  Cycle:    336  Sum sqs:       8.772274  Gnorm:     90.341751  CPU:   42.347
+  Cycle:    337  Sum sqs:       8.771834  Gnorm:     34.834326  CPU:   42.513
+  Cycle:    338  Sum sqs:       8.771654  Gnorm:     41.200745  CPU:   42.680
+  Cycle:    339  Sum sqs:       8.771483  Gnorm:      7.399285  CPU:   42.838
+  Cycle:    340  Sum sqs:       8.771482  Gnorm:      1.036239  CPU:   42.995
+  ** Hessian calculated **
+  Cycle:    341  Sum sqs:       8.771482  Gnorm:      3.062654  CPU:   43.276
+
+
+  **** Fit completed successfully ****
+
+
+  Final sum of squares =             8.771482
+
+  Final gradient norm  =             3.062654
+
+  Final values of parameters :
+
+--------------------------------------------------------------------------------
+ Parameter No.    Parameter        Parameter      Parameter Type  Species
+                  Original         Final                                 
+--------------------------------------------------------------------------------
+         1           2191.090000        87.705657 Buckingham A   
+         2              0.345700         0.667978 Buckingham rho 
+         3              0.073700         0.062895 Shell position    1   9 x
+         4              0.443900         0.453794 Shell position    1   9 y
+         5              0.705300         0.672806 Shell position    1   9 z
+         6              0.294700         0.327243 Shell position    1  10 x
+         7              0.926300         0.936798 Shell position    1  10 y
+         8              0.556100         0.546457 Shell position    1  10 z
+         9              0.443900         0.453630 Shell position    1  11 x
+        10              0.705300         0.672727 Shell position    1  11 y
+        11              0.073700         0.063155 Shell position    1  11 z
+        12              0.556100         0.546458 Shell position    1  12 x
+        13              0.294700         0.327158 Shell position    1  12 y
+        14              0.926300         0.936860 Shell position    1  12 z
+        15              0.705300         0.672659 Shell position    1  13 x
+        16              0.073700         0.063185 Shell position    1  13 y
+        17              0.443900         0.453648 Shell position    1  13 z
+        18              0.926300         0.937101 Shell position    1  14 x
+        19              0.556100         0.546302 Shell position    1  14 y
+        20              0.294700         0.327090 Shell position    1  14 z
+--------------------------------------------------------------------------------
+
+
+  Final values of numerical parameter gradients :
+
+--------------------------------------------------------------------------------
+     Parameter No.       Parameter Gradient      Parameter Type  Species
+--------------------------------------------------------------------------------
+             1                  1.385940          Buckingham A   
+             2                  0.072484          Buckingham rho 
+             3                 -0.042097          Shell position    1   9 x
+             4                 -0.538687          Shell position    1   9 y
+             5                 -1.173445          Shell position    1   9 z
+             6                  0.308987          Shell position    1  10 x
+             7                  1.505715          Shell position    1  10 y
+             8                  0.394490          Shell position    1  10 z
+             9                 -0.071047          Shell position    1  11 x
+            10                 -0.529010          Shell position    1  11 y
+            11                 -0.138837          Shell position    1  11 z
+            12                  0.529986          Shell position    1  12 x
+            13                  0.343336          Shell position    1  12 y
+            14                  0.214523          Shell position    1  12 z
+            15                 -0.745148          Shell position    1  13 x
+            16                 -0.042506          Shell position    1  13 y
+            17                 -0.645727          Shell position    1  13 z
+            18                  0.972148          Shell position    1  14 x
+            19                  0.702576          Shell position    1  14 y
+            20                  0.323888          Shell position    1  14 z
+--------------------------------------------------------------------------------
+
+
+  Final values of residuals :
+
+--------------------------------------------------------------------------------
+   Observable no.  Type            Observable   Calculated    Residual  Error(%)
+--------------------------------------------------------------------------------
+          1        Derivative         0.00000      0.24455      0.05981
+          2        Derivative         0.00000      0.27011      0.07296
+          3        Derivative         0.00000      0.21290      0.04533
+          4        Derivative         0.00000      0.02313      0.00054
+          5        Derivative         0.00000     -0.47528      0.22590
+          6        Derivative         0.00000      0.16393      0.02687
+          7        Derivative         0.00000     -0.17662      0.03120
+          8        Derivative         0.00000      0.14476      0.02095
+          9        Derivative         0.00000      0.34199      0.11695
+         10        Derivative         0.00000     -0.40066      0.16053
+         11        Derivative         0.00000      0.20526      0.04213
+         12        Derivative         0.00000     -0.12063      0.01455
+         13        Derivative         0.00000      0.35792      0.12810
+         14        Derivative         0.00000     -0.13722      0.01883
+         15        Derivative         0.00000      0.11945      0.01427
+         16        Derivative         0.00000      0.23511      0.05528
+         17        Derivative         0.00000     -0.12865      0.01655
+         18        Derivative         0.00000     -0.39332      0.15470
+         19        Derivative         0.00000     -0.01461      0.00021
+         20        Derivative         0.00000      0.42657      0.18197
+         21        Derivative         0.00000     -0.10097      0.01020
+         22        Derivative         0.00000     -0.29395      0.08641
+         23        Derivative         0.00000     -0.11818      0.01397
+         24        Derivative         0.00000      0.27732      0.07691
+         25        Derivative         0.00000     -0.29635      0.08782
+         26        Derivative         0.00000      0.21055      0.04433
+         27        Derivative         0.00000      0.24564      0.06034
+         28        Derivative         0.00000     -0.16864      0.02844
+         29        Derivative         0.00000      0.26102      0.06813
+         30        Derivative         0.00000     -0.21066      0.04438
+         31        Derivative         0.00000      0.24118      0.05817
+         32        Derivative         0.00000     -0.31430      0.09878
+         33        Derivative         0.00000      0.22806      0.05201
+         34        Derivative         0.00000      0.24892      0.06196
+         35        Derivative         0.00000     -0.20438      0.04177
+         36        Derivative         0.00000     -0.16840      0.02836
+         37        Derivative         0.00000      0.30634      0.09385
+         38        Derivative         0.00000      0.19717      0.03888
+         39        Derivative         0.00000     -0.32798      0.10757
+         40        Derivative         0.00000     -1.63848      2.68463
+         41        Derivative         0.00000      0.41450      0.17181
+         42        Derivative         0.00000      0.72447      0.52486
+         43        Derivative         0.00000     -0.46101      0.21253
+         44        Derivative         0.00000     -0.88481      0.78290
+         45        Derivative         0.00000     -1.38017      1.90487
+--------------------------------------------------------------------------------
+
+  Comparison of initial and final observables :
+
+--------------------------------------------------------------------------------
+   Observable no.  Type            Observable   Initial       Final             
+--------------------------------------------------------------------------------
+          1        Derivative         0.00000     -0.44573      0.24455
+          2        Derivative         0.00000     -0.44823      0.27011
+          3        Derivative         0.00000     -0.44852      0.21290
+          4        Derivative         0.00000    -55.93930      0.02313
+          5        Derivative         0.00000    -43.32978     -0.47528
+          6        Derivative         0.00000    -70.01709      0.16393
+          7        Derivative         0.00000     70.01298     -0.17662
+          8        Derivative         0.00000     55.93678      0.14476
+          9        Derivative         0.00000     43.32753      0.34199
+         10        Derivative         0.00000    -43.32898     -0.40066
+         11        Derivative         0.00000    -70.01287      0.20526
+         12        Derivative         0.00000    -55.93651     -0.12063
+         13        Derivative         0.00000     43.32890      0.35792
+         14        Derivative         0.00000     70.01298     -0.13722
+         15        Derivative         0.00000     55.93536      0.11945
+         16        Derivative         0.00000    -70.01287      0.23511
+         17        Derivative         0.00000    -55.93792     -0.12865
+         18        Derivative         0.00000    -43.32797     -0.39332
+         19        Derivative         0.00000     55.96373     -0.01461
+         20        Derivative         0.00000     43.35516      0.42657
+         21        Derivative         0.00000     70.05751     -0.10097
+         22        Derivative         0.00000     60.30144     -0.29395
+         23        Derivative         0.00000     48.75015     -0.11818
+         24        Derivative         0.00000     73.25667      0.27732
+         25        Derivative         0.00000    -73.24933     -0.29635
+         26        Derivative         0.00000    -60.29689      0.21055
+         27        Derivative         0.00000    -48.74612      0.24564
+         28        Derivative         0.00000     48.74861     -0.16864
+         29        Derivative         0.00000     73.24915      0.26102
+         30        Derivative         0.00000     60.29642     -0.21066
+         31        Derivative         0.00000    -48.74852      0.24118
+         32        Derivative         0.00000    -73.24933     -0.31430
+         33        Derivative         0.00000    -60.29441      0.22806
+         34        Derivative         0.00000     73.24915      0.24892
+         35        Derivative         0.00000     60.29885     -0.20438
+         36        Derivative         0.00000     48.74691     -0.16840
+         37        Derivative         0.00000    -60.32878      0.30634
+         38        Derivative         0.00000    -48.77882      0.19717
+         39        Derivative         0.00000    -73.30190     -0.32798
+         40        Derivative         0.00000     -1.70594     -1.63848
+         41        Derivative         0.00000    -18.83354      0.41450
+         42        Derivative         0.00000    -21.73128      0.72447
+         43        Derivative         0.00000      3.49798     -0.46101
+         44        Derivative         0.00000      7.23096     -0.88481
+         45        Derivative         0.00000     10.82279     -1.38017
+--------------------------------------------------------------------------------
+
+  Maximum range for interatomic potentials =    100000.000000 Angstroms
+
+  General interatomic potentials :
+
+--------------------------------------------------------------------------------
+Atom  Types   Potential      Parameter       Value         Units   Cutoffs(Ang)
+  1     2                                                            Min /  Max 
+--------------------------------------------------------------------------------
+Cl   c Cl   s Spring (c-s)  Spring k 2       29.380000    eV*Ang^-2 0.000  0.800
+                            Spring k 4       0.0000000    eV*Ang^-4 
+--------------------------------------------------------------------------------
+Sc   c Cl   s Buckingham    Buckingham A     87.705657    eV        0.000 12.000
+                            Buckingham rho  0.66797841    Ang       
+                            Buckingham C     0.0000000    eV*Ang^6  
+--------------------------------------------------------------------------------
+Cl   s Cl   s Buckingham    Buckingham A     1227.2000    eV        0.000 12.000
+                            Buckingham rho  0.32100000    Ang       
+                            Buckingham C     14.530000    eV*Ang^6  
+--------------------------------------------------------------------------------
+
+
+
+  Total time to end of fitting =      43.2800 seconds
+
+********************************************************************************
+*  Output for configuration   1                                                *
+********************************************************************************
+
+
+  Components of energy : 
+
+--------------------------------------------------------------------------------
+  Interatomic potentials     =          39.38119870 eV    
+  Monopole - monopole (real) =          78.84220954 eV    
+  Monopole - monopole (recip)=        -197.48882744 eV    
+  Monopole - monopole (total)=        -118.64661790 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =         -79.26541919 eV    
+--------------------------------------------------------------------------------
+  Total lattice energy       =           -7647.9013 kJ/(mole unit cells)
+--------------------------------------------------------------------------------
+
+
+  Number of variables =       45
+
+  Maximum number of calculations  =          1000
+  Maximum Hessian update interval =            10
+  Maximum step size               =   1.000000000
+  Maximum parameter tolerance     =   0.000010000
+  Maximum function  tolerance     =   0.000010000
+  Maximum gradient  tolerance     =   0.001000000
+  Maximum gradient  component     =   0.010000000
+
+  Cell parameters to be optimised using strains
+
+  Newton-Raphson optimiser to be used
+
+  BFGS hessian update to be used
+
+  Lower half triangular hessian to be used
+
+  Start of bulk optimisation :
+
+  Cycle:      0 Energy:       -79.265419  Gnorm:      0.065815  CPU:   43.288
+  ** Hessian calculated **
+  Cycle:      1 Energy:       -79.572546  Gnorm:      0.267581  CPU:   43.303
+  Cycle:      2 Energy:       -79.599241  Gnorm:      0.155422  CPU:   43.320
+  Cycle:      3 Energy:       -79.615701  Gnorm:      0.219432  CPU:   43.336
+  Cycle:      4 Energy:       -79.622444  Gnorm:      0.077224  CPU:   43.350
+  Cycle:      5 Energy:       -79.623660  Gnorm:      0.155798  CPU:   43.363
+  Cycle:      6 Energy:       -79.624736  Gnorm:      0.232710  CPU:   43.381
+  Cycle:      7 Energy:       -79.626181  Gnorm:      0.312900  CPU:   43.398
+  Cycle:      8 Energy:       -79.626951  Gnorm:      0.353048  CPU:   43.412
+  Cycle:      9 Energy:       -79.628833  Gnorm:      0.399994  CPU:   43.429
+  Cycle:     10 Energy:       -79.630272  Gnorm:      0.416095  CPU:   43.446
+  ** Hessian calculated **
+  Cycle:     11 Energy:       -79.639082  Gnorm:      0.096780  CPU:   43.471
+  Cycle:     12 Energy:       -79.643801  Gnorm:      0.100431  CPU:   43.495
+  Cycle:     13 Energy:       -79.650863  Gnorm:      0.195660  CPU:   43.511
+  Cycle:     14 Energy:       -79.721557  Gnorm:      0.578827  CPU:   43.537
+  Cycle:     15 Energy:       -79.769921  Gnorm:      1.230327  CPU:   43.553
+  Cycle:     16 Energy:       -79.875371  Gnorm:      1.992948  CPU:   43.566
+  Cycle:     17 Energy:       -80.678126  Gnorm:      3.466236  CPU:   43.592
+  ** Hessian calculated **
+  Cycle:     18 Energy:       -81.790010  Gnorm:      1.394120  CPU:   43.616
+  Cycle:     19 Energy:       -82.901987  Gnorm:      1.793624  CPU:   43.638
+  Cycle:     20 Energy:       -84.917437  Gnorm:      2.774201  CPU:   43.658
+  ** Hessian calculated **
+  Cycle:     21 Energy:       -85.592377  Gnorm:      4.009304  CPU:   43.676
+  Cycle:     22 Energy:       -88.805849  Gnorm:      6.603390  CPU:   43.693
+  ** Hessian calculated **
+  Cycle:     23 Energy:       -93.070477  Gnorm:      5.384628  CPU:   43.715
+  ** Hessian calculated **
+  Cycle:     24 Energy:       -95.779680  Gnorm:      8.591351  CPU:   43.736
+  ** Hessian calculated **
+  Cycle:     25 Energy:       -96.081639  Gnorm:      5.099606  CPU:   43.759
+  ** Hessian calculated **
+  Cycle:     26 Energy:      -220.273745  Gnorm:    188.646576  CPU:   44.031
+  ** Hessian calculated **
+  Cycle:     27 Energy:      -265.953584  Gnorm:    192.035585  CPU:   44.085
+  ** Hessian calculated **
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! ERROR : Largest core-shell distance exceeds cutoff of cuts
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+  Largest core-shell distance =   1.3802 Angstroms
+
+
+ Program terminated by processor     0 in            cutscheck
+

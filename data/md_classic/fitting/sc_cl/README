@@ -1,0 +1,93 @@
+This is a quick summary of the throught process for fitting of Sc-Cl potentials. The designation for the different 
+setups were decided at stage 3 and applied to previous stages retrospectively.
+
+
+1,  Intially, the same strategy was used as in a previous study (DOI: https://doi.org/10.1039/D1TA07588H). The input
+    and output from this can be found in the folder "stage_1".
+
+    This fitting was run on ScCl3 built using the space group symmetry operators, included shells on Cl with a 
+    fixed spring constant. Either shells with a fixed spring constant or no shells at all were used. The starting 
+    point was Al-Cl. Other trials at this stage included calculations with other M-Cl potentials as starting point.
+
+    SETUPS 4 and 6.
+
+    RESULTS:
+    - Worse fit with no shells (SETUP 6), so no shell setups put aside (for now...)
+    - Al-based chosen due to quickest convergence times and similarity of ions
+
+    Sc-Cl: 12131.35 0.2507  0.00 -- used for stages 4 and 5 of project
+    Li-Li:   360.53 0.1610  0.00
+    Li-Cl:   421.04 0.3340  0.00
+    Cl-Cl:  1227.20 0.3210 14.53
+
+
+2,  The next stage was brought about because of the inconsistency in the conductivities (later turned out to be due to 
+    correlated motion and fixed with Haven ratio) and involved more thorough calclaltions. Another factor was that 
+    YCl3 could npot be created from spacegroup using symmetry operators in GULP. The input and output from this can be 
+    found in the folder "stage_2".
+
+    Structures were now generated from primitive cells as this was shown to influence the lattice matrix and 
+    consequently the outcome of the fitting. Another factor found to influence the fitting ws allowing the spring
+    constant to also be fitted. Other trials at this stage included calculations with other M-Cl potentials as 
+    starting point.
+
+    SETUPS 1 and 2.
+
+    RESULTS:
+    - Best fit when k is allowed to be fitted (k increases in all cases - ion more rigid)
+    - Al-based was chosen again for the same reasons as before
+
+    Sc-Cl: 2456.22 0.3147  0.00 -- used for stage 6 of project
+    Li-Li:  360.53 0.1610  0.00
+    Li-Cl:  421.04 0.3340  0.00
+    Cl-Cl: 1227.20 0.3210 14.53
+
+
+3,  The third stage brought about because of the overestimation in the lattice parameters in the LAMMPS calculations.  
+    This stage revolved around doing a comparative study of all the different fitting setups (P1 vs space, noshell vs  
+    constk vs vark; see chart below). The input and output from this can be found in the folder "stage_3".
+    
+    During this stage of the fitting, all possible setups were tried then the potential was used in a LAMMPS 
+    calculation. This seem to have lead to some differenes in the lattice parameter calculated in LAMMPS. Another 
+    small but seemingly significant change was using lattice parameters to every decimal place when the P1 structure   
+    is downloaded from Materials Project page (previously only 4 used as read from Materials Project website).
+
+    SETUPS 1, 2, 3, 4, 5 and 6.
+
+    RESULTS:
+    - After further assessment, it was decided to stay with P1 structures with every decimal place
+    - SETUP 1 broke when tried in LAMMPS
+    - SETUP 2 gave great reproduction of ScCl3 in GULP (+<1%), but struggled to reproduce the halospinel in LAMMPS 
+      (+4.5%) and altering the Li-Cl potentials caused no further improvements
+    - SETUP 3 gave poor reproduction of ScCl3 in GULP (+34%), but performed better in reproducing the halospinel in 
+      LAMMPS; furthermore, adjusting the Li-Cl potential (reduce A parameter) can yield the correct parameter
+    
+    Sc-Cl: 26156.48 0.2499  0.00 -- used for stage 7 of project
+    Li-Cl:   220.00 0.3400  0.00
+    Cl-Cl:  1227.20 0.3210 14.53
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Setups
+|
+ --P1
+|   |
+|    --Shell
+|   |   |
+|   |    --Constant k [SETUP 1] (4/6)
+|   |   |
+|   |    --Variable k [SETUP 2] (4/6)
+|   |
+|    --No shell [SETUP 3] (4/6)
+ --Space
+    |
+     --Shell
+    |   |
+    |    --Constant k [SETUP 4]
+    |   |
+    |    --Variable k [SETUP 5]
+    |
+     --No shell [SETUP 6]
+
+-----------------------------------------------------------------------------------------------------------------------
+Date: 19.04.2022.

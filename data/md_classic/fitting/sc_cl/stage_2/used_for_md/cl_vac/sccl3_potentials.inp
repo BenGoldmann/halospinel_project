@@ -1,0 +1,10 @@
+species
+Sc core 3.000
+Cl core 1.485
+Cl shel -2.485
+spring
+Cl 36.07
+buckingham
+Sc core Cl shel 2456.22 0.3147 0 0 12
+Cl shel Cl shel 1227.20 0.3210 14.53 0 12
+dump ScCl3.grs

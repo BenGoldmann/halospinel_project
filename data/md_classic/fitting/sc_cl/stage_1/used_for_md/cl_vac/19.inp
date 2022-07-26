@@ -1,0 +1,6 @@
+include sccl3_structure.inp
+centre 0.0737 0.4439 0.7053
+size 19 24
+vacancy Cl core
+vacancy Cl shel
+include sccl3_potentials.inp    

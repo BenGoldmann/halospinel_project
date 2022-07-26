@@ -1,0 +1,23 @@
+# 
+# Keywords:
+# 
+fit conp simul opti nosymm comp  
+# 
+# Options:
+# 
+cell
+   3.64350911   3.64350911   3.64350911  60.00000000  60.00000000  60.00000000
+fractional  1   
+Li    core  0.000000000  0.000000000  0.000000000  1.0000000  1.0000  0.0000
+Cl    core  0.500000000  0.500000000  0.500000000 -1.0000000  1.0000  0.0000
+totalenergy            -8.5364943065 eV
+species   2
+Li     core    1.000000                  
+Cl     core   -1.000000                  
+buck     
+Li    core Li    core  360.53000     0.161000  0.0000000      0.00 12.00 0 0 0
+buck     
+Li    core Cl    core  385.13843     0.339961  0.0000000      0.00 12.00 1 1 0
+buck     
+Cl    core Cl    core  1227.2000     0.321000  14.530000      0.00 12.00 0 0 0
+dump LiCl.grs

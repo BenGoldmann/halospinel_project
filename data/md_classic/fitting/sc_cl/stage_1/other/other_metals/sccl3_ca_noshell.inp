@@ -1,0 +1,21 @@
+fit conp opti comp
+cell
+7.453 7.453 7.453 51.648 51.648 51.648
+fractional
+Sc core 0.3339 0.3339 0.3339
+Sc core 0.6661 0.6661 0.6661
+Cl core 0.0737 0.4439 0.7053
+Cl core 0.2947 0.9263 0.5561
+Cl core 0.4439 0.7053 0.0737
+Cl core 0.5561 0.2947 0.9263
+Cl core 0.7053 0.0737 0.4439
+Cl core 0.9263 0.5561 0.2947
+space
+1
+species
+Sc core 3.000
+Cl core -1.000
+buckingham
+Sc core Cl core 2301.00 0.3402 0 0 12 1 1 0
+Cl core Cl core 1227.20 0.3210 14.53 0 12 0 0 0
+dump ScCl3.grs

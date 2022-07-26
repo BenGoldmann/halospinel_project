@@ -1,0 +1,4 @@
+*.lammpstrj
+*.pptx
+*XDATCAR*
+**/extra_data/*

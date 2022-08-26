@@ -1,0 +1,3 @@
+frameworks_i0_w2.cif	0.000 eV
+frameworks_i1_w2.cif	0.000 eV
+frameworks_i2_w2.cif	0.000 eV

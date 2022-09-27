@@ -1,0 +1,47 @@
+
+#======================================================================
+# CRYSTAL DATA
+#----------------------------------------------------------------------
+data_VESTA_phase_1
+
+_chemical_name_common                  'Cl6 Li3 Sc1'
+_cell_length_a                         6.398000
+_cell_length_b                         11.040000
+_cell_length_c                         6.391000
+_cell_angle_alpha                      90.000000
+_cell_angle_beta                       109.889999
+_cell_angle_gamma                      90.000000
+_cell_volume                           424.492949
+_space_group_name_H-M_alt              'C 2/m'
+_space_group_IT_number                 12
+
+loop_
+_space_group_symop_operation_xyz
+   'x, y, z'
+   '-x, -y, -z'
+   '-x, y, -z'
+   'x, -y, z'
+   'x+1/2, y+1/2, z'
+   '-x+1/2, -y+1/2, -z'
+   '-x+1/2, y+1/2, -z'
+   'x+1/2, -y+1/2, z'
+
+loop_
+   _atom_site_label
+   _atom_site_occupancy
+   _atom_site_fract_x
+   _atom_site_fract_y
+   _atom_site_fract_z
+   _atom_site_adp_type
+   _atom_site_U_iso_or_equiv
+   _atom_site_type_symbol
+   Li1        1.0     0.500000     0.834700     0.000000    Uiso  ? Li
+   Li2        0.3650  0.000000     0.169000     0.500000    Uiso  ? Li
+   Li3        0.2700  0.500000     0.000000     0.500000    Uiso  ? Li
+   Sc1        1.0     0.000000     0.000000     0.000000    Uiso  ? Sc
+   Cl1        1.0     0.757900     0.000000     0.231300    Uiso  ? Cl
+   Cl2        1.0     0.238700     0.839100     0.237100    Uiso  ? Cl
+   XX         1.0     0.125000     0.333333     0.375000    Uiso  0.050000 O
+   XX         1.0     0.875000     0.166667     0.125000    Uiso  0.050000 H
+   XX         1.0     0.875000     0.500000     0.125000    Uiso  0.050000 N
+   XX         1.0     0.875000     0.000000     0.625000    Uiso  0.050000 C
